@@ -1,24 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Priya Portfolio</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priya Yadav | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    color:#cbd5e1;
+    margin-bottom:25px;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#38bdf8;
+    color:#000;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    background:#111827;
+    padding:15px;
+    text-align:center;
+    z-index:100;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
+
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    color:#d1d5db;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:20px;
+    text-align:center;
+    border-radius:12px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+}
+
+.card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    color:#94a3b8;
+}
+</style>
+</head>
 <body>
 
-<h1>Hello, I'm Priya</h1>
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-<h2>About Me</h2>
-<p>I am learning web development.</p>
+<header>
+    <div class="hero">
+        <h1>Hi, I'm <span>Priya Yadav</span></h1>
+        <p>MCA Student | Web Developer | PHP & MySQL Developer</p>
+        <a href="#projects" class="btn">View Projects</a>
+    </div>
+</header>
 
-<h2>My Skills</h2>
-<p>HTML, CSS, JavaScript</p>
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about">
+        <p>
+            I am an MCA student passionate about web development and software
+            engineering. I enjoy building real-world applications using HTML,
+            CSS, JavaScript, PHP and MySQL.
+        </p>
+    </div>
+</section>
 
-<h2>My Projects</h2>
-<p>My portfolio website project</p>
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
 
-<h2>Contact</h2>
-<p>Email: your@email.com</p>
+    <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">PHP</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">Responsive Design</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>QR Attendance Management System</h3>
+            <p>
+                Smart attendance tracking system using QR Code scanning for
+                students, teachers, parents and administrators.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Student Management System</h3>
+            <p>
+                Web-based system for managing student records, attendance
+                and academic information.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>
+                Personal portfolio website showcasing skills,
+                projects and achievements.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact">
+        <p>Email: your-email@gmail.com</p>
+        <p>GitHub: github.com/priyadkav</p>
+        <p>LinkedIn: Add Your LinkedIn Profile</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Priya Yadav | Portfolio
+</footer>
 
 </body>
 </html>
