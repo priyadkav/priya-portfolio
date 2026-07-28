@@ -1,99 +1,466 @@
-<section id="home">
-    <h1>Hi, I'm Priya Yadav</h1>
-    <h2>Frontend Web Developer</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priya Yadav | Portfolio</title>
 
-    <p>
-        I am passionate about creating responsive, user-friendly and visually
-        appealing websites using HTML, CSS, JavaScript and Python. I enjoy
-        learning modern technologies and building creative web applications.
-    </p>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eef5ff;
+    color:#1f2937;
+}
+
+nav{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:1400px;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:24px;
+    color:#6366f1;
+}
+
+.logo-circle{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#4f46e5,#d946ef);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#374151;
+    font-weight:500;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:120px 8%;
+    gap:50px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.badge{
+    display:inline-block;
+    background:white;
+    padding:10px 20px;
+    border-radius:30px;
+    margin-bottom:25px;
+    font-weight:500;
+}
+
+.hero h1{
+    font-size:70px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero span{
+    background:linear-gradient(135deg,#4f46e5,#d946ef);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h2{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#6b7280;
+    line-height:1.8;
+    max-width:700px;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+    margin-right:15px;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#4f46e5,#d946ef);
+    color:white;
+}
+
+.btn-secondary{
+    background:white;
+    color:#111827;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    object-fit:cover;
+    border:8px solid #7c3aed;
+}
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:50px;
+}
+
+.skills-grid,
+.about-grid,
+.stats,
+.projects{
+    display:grid;
+    gap:20px;
+}
+
+.skills-grid{
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+}
+
+.skill{
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:15px;
+    font-weight:600;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-content h3{
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.about-content p{
+    color:#6b7280;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.about-grid{
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    margin-top:40px;
+}
+
+.about-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.stats{
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    margin-top:40px;
+}
+
+.stat{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.stat h2{
+    color:#6366f1;
+    font-size:40px;
+}
+
+.projects{
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+}
+
+.project{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+}
+
+.project h3{
+    margin-bottom:15px;
+    color:#4f46e5;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:white;
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero-image img{
+    width:280px;
+    height:280px;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <div class="logo-circle">PY</div>
+        Priya Yadav
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <div class="badge">🟢 Fresher · Open to opportunities</div>
+
+        <h1>Hi, I'm <span>Priya Yadav</span></h1>
+
+        <h2>Python & Frontend Developer</h2>
+
+        <p>
+            I am passionate about creating responsive, user-friendly and visually
+            appealing websites using HTML, CSS, JavaScript and Python.
+            I enjoy learning modern technologies and building creative web applications.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        <!-- Upload your image as profile.jpg -->
+        <img src="profile.jpg" alt="Priya Yadav">
+    </div>
+
 </section>
 
 <section id="about">
-    <h2>About Me</h2>
 
-    <h3>A Passionate Learner & Builder</h3>
+    <h2 class="section-title">About Me</h2>
 
-    <p>
-        I'm Priya Yadav, an enthusiastic and passionate learner focused on
-        becoming a well-rounded Full Stack Developer. I love crafting clean,
-        responsive interfaces with HTML, CSS and JavaScript, and I'm equally
-        excited by the logic and problem-solving that comes with Python programming.
-    </p>
+    <div class="about-content">
 
-    <p>
-        Every day I push myself to learn a new concept, refine a component,
-        or understand a new tool. My goal is to build web experiences that
-        are not only functional but also beautiful, accessible and delightful to use.
-    </p>
+        <h3>A Passionate Learner & Builder</h3>
 
-    <div>
-        <p>⚡ Fast Learner</p>
-        <p>🧩 Problem Solver</p>
-        <p>🤝 Team Player</p>
-        <p>🎯 Detail Oriented</p>
+        <p>
+            I'm Priya Yadav, an enthusiastic and passionate learner focused on becoming
+            a well-rounded Full Stack Developer. I love crafting clean, responsive
+            interfaces with HTML, CSS and JavaScript, and I'm equally excited by the
+            logic and problem-solving that comes with Python programming.
+        </p>
+
+        <p>
+            Every day I push myself to learn a new concept, refine a component or
+            understand a new tool. My goal is to build web experiences that are not
+            only functional but also beautiful, accessible and delightful to use.
+        </p>
+
+        <div class="about-grid">
+            <div class="about-card">⚡ Fast Learner</div>
+            <div class="about-card">🧩 Problem Solver</div>
+            <div class="about-card">🤝 Team Player</div>
+            <div class="about-card">🎯 Detail Oriented</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <h2>2</h2>
+                <p>Projects Built</p>
+            </div>
+
+            <div class="stat">
+                <h2>7+</h2>
+                <p>Technologies</p>
+            </div>
+
+            <div class="stat">
+                <h2>100%</h2>
+                <p>Dedication</p>
+            </div>
+
+            <div class="stat">
+                <h2>∞</h2>
+                <p>Curiosity</p>
+            </div>
+        </div>
+
     </div>
 
-    <div>
-        <h3>2 Projects Built</h3>
-        <h3>7+ Technologies</h3>
-        <h3>100% Dedication</h3>
-        <h3>∞ Curiosity</h3>
-    </div>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
 
-    <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>PHP</li>
-        <li>MySQL</li>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>Responsive Design</li>
-        <li>UI/UX Design</li>
-    </ul>
+    <h2 class="section-title">Skills</h2>
+    <p class="section-subtitle">Tools I Work With</p>
+
+    <div class="skills-grid">
+
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">React</div>
+        <div class="skill">Tailwind CSS</div>
+        <div class="skill">Git</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">Figma</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">REST APIs</div>
+
+    </div>
+
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
 
-    <h3>QR Attendance Management System</h3>
-    <p>
-        Smart attendance management system using QR code generation and scanning
-        for students, teachers, parents and administrators.
-    </p>
+    <h2 class="section-title">Projects</h2>
 
-    <ul>
-        <li>QR Code Generation</li>
-        <li>Student Attendance Tracking</li>
-        <li>Teacher Dashboard</li>
-        <li>Parent Portal</li>
-        <li>Admin Management</li>
-        <li>Attendance Reports</li>
-    </ul>
+    <div class="projects">
 
-    <h3>Student Management System</h3>
-    <p>
-        Web application for managing student records, attendance
-        and academic information.
-    </p>
+        <div class="project">
+            <h3>QR Attendance Management System</h3>
 
-    <h3>Personal Portfolio Website</h3>
-    <p>
-        Responsive portfolio website showcasing my skills,
-        projects and achievements.
-    </p>
+            <p>
+                Smart attendance management system using QR code generation and
+                scanning for students, teachers, parents and administrators.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Student Management System</h3>
+
+            <p>
+                Web application for managing student records, attendance and
+                academic information.
+            </p>
+        </div>
+
+    </div>
+
 </section>
 
 <section id="contact">
-    <h2>Contact Me</h2>
 
-    <p>Email: your-email@gmail.com</p>
-    <p>GitHub: github.com/priyadkav</p>
-    <p>LinkedIn: Add Your LinkedIn URL</p>
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact">
+        <p>📧 your-email@gmail.com</p>
+        <p>💻 github.com/priyadkav</p>
+        <p>🔗 Add Your LinkedIn Profile</p>
+    </div>
+
 </section>
+
+<footer>
+    © 2026 Priya Yadav | Portfolio
+</footer>
+
+</body>
+</html>
